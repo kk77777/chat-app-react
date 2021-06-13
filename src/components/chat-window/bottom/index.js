@@ -6,6 +6,7 @@ import firebase from 'firebase/app';
 import { useProfile } from '../../../context/profile.context';
 import { database } from '../../../misc/firebase';
 import AttachmentBtnModal from './AttachmentBtnModal';
+import AudioMessageBtn from './AudioMessageBtn';
 
 function assembleMessage(profile, chatId) {
   return {
@@ -99,6 +100,7 @@ const Bottom = () => {
     <div>
       <InputGroup>
         <AttachmentBtnModal afterUpload={afterUpload} />
+        <AudioMessageBtn afterUpload={afterUpload} />
         <Input
           placeholder="Write a new message here..."
           value={input}
